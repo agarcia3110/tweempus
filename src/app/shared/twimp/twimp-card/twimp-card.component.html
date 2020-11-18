@@ -1,0 +1,19 @@
+<section class="twimp">
+
+  <div class="twimp_header">
+    <img class="twimp_header_img" [src]="twimp.autor.image" alt="{{twimp.autor.image}}">
+    <a class="twimp_header_name" [href]="twimp.autor.url" target="_b">by {{twimp.autor.fullName}}</a>
+    <div class="twimp_header_date">Published on {{twimp.timestamp}}</div>
+  </div>
+
+  <div class="twimp_content">
+    {{twimp.content}}
+  </div>
+
+  <hr class="twimp_line">
+
+  <div class="twimp_fav">
+    <a class="fav_icon {{selected}}" href="#" (click)="favorite()">&#10084;</a>
+  </div>
+
+</section>
