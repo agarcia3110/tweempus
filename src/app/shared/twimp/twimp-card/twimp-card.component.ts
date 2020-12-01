@@ -25,7 +25,15 @@ export class TwimpCardComponent implements OnInit {
       this.selected = "fav_icon-selected";
     else
       this.selected = "";
-
   }
+
+  save(): void {
+    console.log("He guardado los datos");
+  }
+
+  number: string = '911112255';
+  fecha: number = Date.now();
+  moneda: number = 5.548;
+  palabra: string = 'FraseLarga';
 
 }

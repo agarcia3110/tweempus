@@ -2,7 +2,7 @@
 
   <div class="twimp_header">
     <img class="twimp_header_img" [src]="twimp.autor.image" alt="{{twimp.autor.image}}">
-    <a class="twimp_header_name" [href]="twimp.autor.url" target="_b">by {{twimp.autor.fullName}} PEPE</a>
+    <a class="twimp_header_name" [href]="twimp.autor.url" target="_b">by {{twimp.autor.fullName}}</a>
     <div class="twimp_header_date">Published on {{twimp.timestamp}}</div>
   </div>
 
@@ -15,5 +15,21 @@
   <div class="twimp_fav">
     <a class="fav_icon {{selected}}" href="#" (click)="favorite()">&#10084;</a>
   </div>
+
+  <button type="button" [confirm]="save" tweempusConfirmationPanel>Guardar</button>
+
+  <ul>
+    <li>El numero original es {{number}}</li>
+    <li>El número en España seria {{number | numberPrefix:'SPAIN'}}</li>
+    <li>El número en Francia seria {{number | numberPrefix:'FRANCE'}}</li>
+    <li>Fecha {{fecha}}</li>
+    <li>Fecha {{fecha | date: 'fullDate'}}</li>
+    <li>Moneda {{moneda}}</li>
+    <li>Moneda {{moneda | currency:'EUR':'symbol':'1.0-2'}}</li>
+    <li>Decimal {{moneda | number:'2.4-5'}}</li>
+    <li>Palabra {{palabra | slice:0:7}}</li>
+    <li>Palabra {{palabra | uppercase}}</li>
+  </ul>
+  <p tweempusYellowBackground>Parráaafo de pruebas</p>
 
 </section>
